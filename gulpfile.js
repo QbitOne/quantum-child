@@ -42,11 +42,30 @@ function style() {
 }
 
 function compileCSS() {
-  return gulp
-    .src('./assets/css/unminified/style.css')
-    .pipe(minifyCSS())
-    .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('./assets/css/minified'));
+  /**
+   * SCRIPT FORMAT:
+   *
+   * npm run compile:js -- --source
+   * source is the filename without '.js'
+   */
+  const source = process.argv
+    .splice(3, process.argv.length - 3)
+    .toString()
+    .replace('--', '');
+
+  if (source) {
+    return gulp
+      .src(`./assets/css/unminified/${source}.css`)
+      .pipe(minifyCSS())
+      .pipe(rename(`${source}.min.css`))
+      .pipe(gulp.dest('./assets/css/minified'));
+  } else {
+    return gulp
+      .src('./assets/css/unminified/style.css')
+      .pipe(minifyCSS())
+      .pipe(rename('style.min.css'))
+      .pipe(gulp.dest('./assets/css/minified'));
+  }
 }
 
 function compileJS() {
@@ -71,19 +90,19 @@ function compileJS() {
       )
       .pipe(concat(`${source}.min.js`))
       .pipe(gulp.dest('./assets/js/custom/minified'));
+  } else {
+    /**
+     * SCRIPT FORMAT:
+     *
+     * npm run compile:js
+     * bundle all script in assets/js/core to 'bundle.min.js'
+     */
+    return gulp
+      .src('./assets/js/core/*.js')
+      .pipe(terser({ toplevel: true }))
+      .pipe(concat('bundle.min.js'))
+      .pipe(gulp.dest('./assets/js'));
   }
-
-  /**
-   * SCRIPT FORMAT:
-   *
-   * npm run compile:js
-   * bundle all script in assets/js/core to 'bundle.min.js'
-   */
-  return gulp
-    .src('./assets/js/core/*.js')
-    .pipe(terser({ toplevel: true }))
-    .pipe(concat('bundle.min.js'))
-    .pipe(gulp.dest('./assets/js'));
 }
 
 function runServer() {
