@@ -6,4 +6,5 @@
 
 $path = QUANTUM_CHILD_DIR . 'inc/';
 
+require_once $path . 'core/loader.php';
 require_once $path . 'footer/loader.php';
