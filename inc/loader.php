@@ -4,9 +4,6 @@
  * Loader for core files
  */
 
-$path = QUANTUM_CHILD_DIR . 'inc/header/';
+$path = QUANTUM_CHILD_DIR . 'inc/';
 
-/**
- * Functions which enhance the theme by hooking into WP
- */
-require_once $path . 'loader.php';
+require_once $path . 'footer/loader.php';
