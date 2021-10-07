@@ -4,6 +4,6 @@
  * Loader for the footer
  */
 
-$path = QUANTUM_CHILD_DIR . 'inc/footer/';
 
-require_once $path . 'footer.php';
+
+require_once QUANTUM_CHILD_DIR . 'inc/footer/footer.php';
