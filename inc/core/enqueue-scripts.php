@@ -18,19 +18,8 @@ if (!function_exists('qc_action_after_setup_theme')) :
             $qc_enqueue_sripts->add_login_style('login');
 
             // AOS Scripts & Styles
-            $qc_enqueue_sripts->wp_enqueue_script(
-                'aos',
-                'https://unpkg.com/aos@2.3.1/dist/aos.js',
-                [],
-                false,
-                false
-            );
-            $qc_enqueue_sripts->wp_enqueue_style(
-                'aos',
-                'https://unpkg.com/aos@2.3.1/dist/aos.css',
-                [],
-                false
-            );
+            $qc_enqueue_sripts->wp_enqueue_script('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js');
+            $qc_enqueue_sripts->wp_enqueue_style('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css');
 
             $qc_enqueue_sripts->enqueue();
         endif;
