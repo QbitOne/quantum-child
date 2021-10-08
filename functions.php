@@ -18,22 +18,3 @@ define('QUANTUM_CHILD_DIR', trailingslashit(get_stylesheet_directory()));
 define('QUANTUM_CHILD_URI', trailingslashit(esc_url(get_stylesheet_directory_uri())));
 
 require QUANTUM_CHILD_DIR . 'inc/loader.php';
-
-
-
-
-
-
-add_action('wp_enqueue_scripts', 'quantum_parent_theme_enqueue_styles');
-
-/**
- * Enqueue scripts and styles.
- */
-function quantum_parent_theme_enqueue_styles()
-{
-	wp_enqueue_style(
-		'quantum-child-style',
-		get_stylesheet_directory_uri() . '/assets/css/minified/style.min.css',
-		['quantum-style']
-	);
-}
