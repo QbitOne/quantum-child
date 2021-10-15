@@ -1,4 +1,5 @@
-.git
-.gitignore
-.github/*
-.git-ftp-ignore
+.*
+postcss
+gulpfile.js
+package.js
+package-lock.js
