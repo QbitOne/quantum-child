@@ -17,4 +17,8 @@ define('QUANTUM_CHILD_SETTINGS', 'quantum-child-settings');
 define('QUANTUM_CHILD_DIR', trailingslashit(get_stylesheet_directory()));
 define('QUANTUM_CHILD_URI', trailingslashit(esc_url(get_stylesheet_directory_uri())));
 
-require QUANTUM_CHILD_DIR . 'inc/loader.php';
+
+require_once QUANTUM_CHILD_DIR . 'inc/core/enqueue-scripts.php';
+
+require_once QUANTUM_CHILD_DIR . 'inc/header/header.php';
+require_once QUANTUM_CHILD_DIR . 'inc/footer/footer.php';
