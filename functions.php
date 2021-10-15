@@ -22,4 +22,5 @@ require QUANTUM_CHILD_DIR . 'inc/loader.php';
 
 require_once QUANTUM_CHILD_DIR . 'inc/core/enqueue-scripts.php';
 
+require_once QUANTUM_CHILD_DIR . 'inc/header/header.php';
 require_once QUANTUM_CHILD_DIR . 'inc/footer/footer.php';
