@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) exit;
 
 define('QUANTUM_PROJECT_VERSION', '0.1.0');
 
-define('QUANTUM_CHILD_VERSION', '0.2.0');
+define('QUANTUM_CHILD_VERSION', '0.3.0');
 define('QUANTUM_CHILD_SETTINGS', 'quantum-child-settings');
 define('QUANTUM_CHILD_DIR', trailingslashit(get_stylesheet_directory()));
 define('QUANTUM_CHILD_URI', trailingslashit(esc_url(get_stylesheet_directory_uri())));
