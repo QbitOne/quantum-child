@@ -1,7 +1,6 @@
 .*
 
 postcss
-dev
 
 gulpfile.js
 package.js
