@@ -1,15 +1,16 @@
 <?php
 
 /**
- * Impressum
- *
- * @package Quantum
+ * Impressum    
+ * 
+ * @since 0.1.0
  */
 
-// Exit if accessed directly.
-if (!defined('ABSPATH')) exit;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-wp_head();
+get_header();
+?>
 
 
-wp_footer();
+<?php
+get_footer();
