@@ -1,7 +1,7 @@
 # QbitOne Quantum Child-Theme
 
-# Changelog
+## Changelog
 
-## 0.1.0
+### 0.1.0
 
 - project initialize
