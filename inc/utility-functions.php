@@ -3,5 +3,5 @@
 /**
  * Utility functions.
  * 
- * @since 0.4.0
+ * @since 1.0.0
  */
